@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activitys.login.LoginFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:title="LOGIN"
+        app:titleTextColor="@color/white"
+
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        android:hint="@string/login_e_mail"
+        app:endIconDrawable="@drawable/ic_baseline_alternate_email_24"
+
+        app:layout_constraintTop_toBottomOf="@id/toolbarLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:drawableEnd="@drawable/ic_baseline_alternate_email_24"
+            android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:errorEnabled="true"
+        app:helperText="digite uma senha "
+        app:counterMaxLength="8"
+        android:enabled="true"
+        android:hint="@string/login_senha"
+        app:counterEnabled="true"
+        app:passwordToggleEnabled="true"
+
+        app:layout_constraintTop_toBottomOf="@id/inputEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberPassword"
+            android:enabled="true"
+            android:maxLength="8"
+            android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/registerLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "@string/login_fa_a_o_seu_cadastro"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/inputPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btLoginContinue"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/login_continuar"
+        android:background="@drawable/button_enable"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:enabled="false"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
